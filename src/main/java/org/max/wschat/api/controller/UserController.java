@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -30,7 +31,7 @@ public class UserController {
     }
 
     @GetMapping(Endpoints.User.GET_USER)
-    public ResponseEntity<User> getUserByUsername(final String username) {
+    public ResponseEntity<User> getUserByUsername(@RequestParam final String username) {
         final User user = this.userService.findUserByUserName(username);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
