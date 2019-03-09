@@ -1,4 +1,4 @@
-package org.max.wschat.config;
+package org.max.wschat.bootstrap.context;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

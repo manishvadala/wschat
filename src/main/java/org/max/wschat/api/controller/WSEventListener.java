@@ -1,4 +1,4 @@
-package org.max.wschat.controller;
+package org.max.wschat.api.controller;
 
 import org.max.wschat.model.ChatMessage;
 import org.slf4j.Logger;
